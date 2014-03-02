@@ -8,12 +8,10 @@ angular
 			if(name) {
 				$scope.names.push(name);
 				$scope.newName = "";
-			} else {
-				console.warn('can\'t add empty');
 			}
 		}
 
-		$scope.remove = function(name, $event) {
+		$scope.remove = function(name) {
 			var confirm = window.confirm("really?")
 
 			if(confirm) {
@@ -22,4 +20,3 @@ angular
 		}
 
 	});
-	
