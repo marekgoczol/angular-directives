@@ -8,19 +8,21 @@
 </head>
 <body ng-app="customDirectives">
 	
+	<!-- Ctrl1 controller -->
 	<div ng-controller="Ctrl1">
-	
-	<form ng-submit="addName(newName)">
-		<input type="text" ng-model="newName">
-		<input type="submit">
-		<ul>
-			<li ng-repeat="name in names">
-				{{name}}
-				<button ng-click="remove(name)">remove</button>
-			</li>
-		</ul>
-		<p ng-if="!names.length">no names</p>
-	</form>
+		<form ng-submit="addName(newName)">
+			<input type="text" ng-model="newName">
+			<input type="submit">
+			<ul>
+				<li ng-repeat="name in names">
+					{{name}}
+					<button ng-click="remove(name)">remove</button>
+				</li>
+			</ul>
+			<p ng-if="!names.length">no names</p>
+		</form>
+	</div>
+	<!-- /Ctrl1 controller -->
 		
 </body>
 </html>
