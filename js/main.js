@@ -2,8 +2,6 @@ angular
 	.module('customDirectives', [])
 	
 	.controller('Ctrl1', function($scope){
-		$scope.name = "Joe";
-		$scope.newName;
 		$scope.names = ['Joe', 'Samanta', 'Emil'];
 
 		$scope.addName = function(name) {
@@ -24,3 +22,4 @@ angular
 		}
 
 	});
+	
