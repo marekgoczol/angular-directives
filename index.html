@@ -8,21 +8,15 @@
 </head>
 <body ng-app="customDirectives">
 		
-	<!-- Ctrl1 controller -->
-	<div ng-controller="Ctrl1">
-		<form ng-submit="addName(newName)">
-			<input type="text" ng-model="newName">
-			<input type="submit">
-			<ul>
-				<li ng-repeat="name in names track by $index">
-					{{name}}
-					<button ng-click="remove(name)">remove</button>
-				</li>
-			</ul>
-			<p ng-if="!names.length">no names</p>
-		</form>
+	<div ng-controller="ctrl1">
+
+		<div my-directive 
+			 attribute-name="attribute value" 
+			 enclosing-scope-attribute="scopeName"
+			 done="log()">
+		</div>
+
 	</div>
-	<!-- /Ctrl1 controller -->
 		
 </body>
 </html>
