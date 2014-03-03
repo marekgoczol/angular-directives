@@ -1,19 +1,15 @@
 angular.module('customDirectives', [])
+    
     .controller('ctrl1', function($scope){
-        $scope.scopeName = "Marianna";
-        $scope.log = function(){
-            console.log($scope);
-        }
+        $scope.plane = 'Boeing 747';
     })
+
     .directive('myDirective', function() {
         return {
-            scope: {
-                attributeName: '@',
-                enclosingScopeAttribute: '=',
-                done: '&'
-            },
-            template: 'Isolated scope: {{attributeName}} <br>' +
-                      'Scope attr: {{enclosingScopeAttribute}} <br>'+
-                      '<button ng-click="done()">Scope function</button>'
+            scope: {}, // own isolated scope
+            template: '<input ng-model="plane"> {{plane}}',
+            link: function(scope, element, attrs) {
+                console.log(scope);
+            }
         }
     });
