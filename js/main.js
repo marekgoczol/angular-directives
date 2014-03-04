@@ -6,7 +6,7 @@ angular.module('customDirectives', [])
 
     .directive('myDirective', function() {
         return {
-            scope: {}, // own isolated scope
+            // scope: {}, // own isolated scope
             template: '<input ng-model="plane"> {{plane}}',
             link: function(scope, element, attrs) {
                 console.log(scope);
