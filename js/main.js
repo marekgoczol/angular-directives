@@ -1,8 +1,4 @@
 angular.module('customDirectives', [])
-    
-    .controller('ctrl1', function($scope){
-        $scope.plane = 'Boeing 747';
-    })
 
     .directive('chStepper', function() {
         return {
